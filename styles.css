@@ -1,0 +1,120 @@
+body, html {
+    height: 100%;
+    /* border: solid red; */
+  }
+
+body {
+    background-image: url("/img/sauna.jpg");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+ 
+}
+
+main {
+    /* border: solid purple; */
+    display: flex;
+    height: 100%;
+  
+}
+
+p {
+    visibility: hidden;
+    position: absolute;
+    left: 44.5%;
+    top: 12%;
+    font-size: 40px;
+    color: whitesmoke;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+.Glasspane {
+    background: white;
+    position: absolute;
+    background: linear-gradient(to right top,
+    rgba(255,255,255,0.3), 
+    rgba(255,255,255,0.1));
+}
+
+
+/* Needed to use absolulte position to match door in background image */
+#rightpane{
+    right: 0%;
+    height: 109%;
+    width: 37%;
+    border-bottom-left-radius: 1rem;
+    background: linear-gradient(to left top,
+    rgba(255,255,255,0.3), 
+    rgba(255,255,255,0.1));
+}
+
+ #leftpane{
+    left: 0%;
+    height: 111%;
+    width: 37.8%;
+    border-bottom-right-radius: 2rem;
+    background: linear-gradient(to left top,
+    rgba(255,255,255,0.3), 
+    rgba(255,255,255,0.1));
+}
+
+#door  {
+    right: 37%;
+    top:9%;
+    height: 100%;
+    width: 25.3%;
+    padding: 0;
+    margin: 0;
+}
+
+
+#handle {
+    right: 57.9%;
+    top: 57%;
+    height: 150px;
+    width: 40px;
+    border-radius: .5rem;
+    background: linear-gradient(to right top,
+    rgba(255,255,255,.9), 
+    rgba(255,255,255,.9));
+}
+
+#baseleft {
+    left: 0%;
+    top:109%;
+    height: 9%;
+    width: 100%;
+    background: linear-gradient(to left bottom,
+    rgba(16, 15, 15, 1), 
+    rgba(67, 58, 58, 1));
+}
+
+#baseright{
+    border-radius: .25rem;
+    right: 0%;
+    top:0%;
+    width: 100%;
+    height: 9%;
+    background: linear-gradient(to right bottom,
+    rgba(16, 15, 15, 1), 
+    rgba(67, 58, 58, 1));
+}
+
+
+#shutdoor {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 3rem;
+    right: 57.9%;
+    top: 66.5%;
+    height: 30px;
+    width: 40px;
+    background: linear-gradient(to right top,
+    rgba(70, 68, 68, 0.98), 
+    rgba(255,255,255,.8));
+}
