@@ -22,28 +22,35 @@ main {
   
 }
 
-p {
-    visibility: hidden;
+.hello {
+    animation: fadeinout 4.5s linear forwards;
+    opacity: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+
+@keyframes fadeinout {
+  25% { opacity: 1; }
+}
+
+
+.hello.greeting {  
     position: absolute;
     left: 44.5%;
     top: 12%;
     font-size: 40px;
-    color: whitesmoke;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-
 }
 
-.Glasspane {
-    background: white;
+.hello.heat {
     position: absolute;
-    background: linear-gradient(to right top,
-    rgba(255,255,255,0.3), 
-    rgba(255,255,255,0.1));
+    top: 50%;
+    left: 39%;
+    font-size: 40px;
 }
-
 
 /* Needed to use absolulte position to match door in background image */
-#rightpane{
+#rightpane {
+    position: absolute;
     right: 0%;
     height: 109%;
     width: 37%;
@@ -53,7 +60,8 @@ p {
     rgba(255,255,255,0.1));
 }
 
- #leftpane{
+ #leftpane {
+    position: absolute;
     left: 0%;
     height: 111%;
     width: 37.8%;
@@ -63,17 +71,23 @@ p {
     rgba(255,255,255,0.1));
 }
 
-#door  {
+
+#door {
+    position: absolute;
     right: 37%;
     top:9%;
     height: 100%;
     width: 25.3%;
     padding: 0;
     margin: 0;
+    background: linear-gradient(to right top,
+    rgba(255,255,255,0.3), 
+    rgba(255,255,255,0.1));
 }
 
 
 #handle {
+    position: absolute;
     right: 57.9%;
     top: 57%;
     height: 150px;
@@ -84,30 +98,7 @@ p {
     rgba(255,255,255,.9));
 }
 
-#baseleft {
-    left: 0%;
-    top:109%;
-    height: 9%;
-    width: 100%;
-    background: linear-gradient(to left bottom,
-    rgba(16, 15, 15, 1), 
-    rgba(67, 58, 58, 1));
-}
-
-#baseright{
-    border-radius: .25rem;
-    right: 0%;
-    top:0%;
-    width: 100%;
-    height: 9%;
-    background: linear-gradient(to right bottom,
-    rgba(16, 15, 15, 1), 
-    rgba(67, 58, 58, 1));
-}
-
-
 #shutdoor {
-    visibility: hidden;
     position: absolute;
     border-radius: 3rem;
     right: 57.9%;
@@ -118,3 +109,17 @@ p {
     rgba(70, 68, 68, 0.98), 
     rgba(255,255,255,.8));
 }
+
+
+.woodgrain {
+    position: absolute;
+    background: linear-gradient(to left bottom,
+    rgba(16, 15, 15, 1), 
+    rgba(67, 58, 58, 1));
+    width: 100%;
+    height: 9%;
+}
+.woodgrain.bottom {
+    top:109%;
+}
+

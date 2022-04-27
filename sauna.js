@@ -1,26 +1,25 @@
-//Grab door handle
+let opensesame = document.getElementById("handle");
+let shut = document.getElementById("shutdoor");
+let enterance = document.getElementById("enter");
+let exit = document.getElementById("exit");
+let heat = document.getElementById("fadein");
 
-// document.addEventListener("click", openDoor);
+opensesame.addEventListener("click", openDoor);
+shut.addEventListener("click", closeDoor);
 
-let door = document.getElementById("door");
-let opendoor = document.getElementById("handle");
-let greeting = document.getElementById("greeting");
-let closedoor = document.getElementById("shutdoor");
+// reset default property
+exit.style.display = "none";
 
-opendoor.addEventListener("click", openDoor);
-closedoor.addEventListener("click", closeDoor);
-
+//Hide glass door and present option to close.
 function openDoor() {
-  door.style.visibility = "hidden";
-  opendoor.style.visibility = "hidden";
-  greeting.style.visibility = "visible";
-  closedoor.style.visibility = "visible";
+  enterance.style.display = "none";
+  exit.style.display = "inline";
+
   return;
 }
+//revert back to original setting.
 function closeDoor() {
-  door.style.visibility = "visible";
-  opendoor.style.visibility = "visible";
-  greeting.style.visibility = "hidden";
-  closedoor.style.visibility = "hidden";
+  enterance.style.display = "inline";
+  exit.style.display = "none";
   return;
 }
