@@ -13,7 +13,6 @@ exit.style.display = "none";
 function openDoor() {
   enterance.style.display = "none";
   exit.style.display = "inline";
-
   return;
 }
 //revert back to original setting.
